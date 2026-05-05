@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Castilho | Portfólio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --primary:#5a4fff;
+  --dark:#1c1c1c;
+  --accent:#2d1b1b;
+  --gray:#666;
+  --radius:18px;
+}
+
+* {margin:0;padding:0;box-sizing:border-box;}
+
+body {
+  font-family:'Inter', sans-serif;
+  background:#f7f7fb;
+  color:#111;
+}
+
+/* GRID */
+.container {
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+nav {
+  display:flex;
+  gap:25px;
+  color:var(--gray);
+}
+
+.cta {
+  background:var(--primary);
+  color:#fff;
+  padding:12px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.cta:hover {
+  transform:translateY(-2px);
+}
+
+/* HERO */
+.hero {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+  margin-top:40px;
+}
+
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.hero p {
+  color:var(--gray);
+  margin-bottom:25px;
+}
+
+.hero-img {
+  position:relative;
+}
+
+.hero-img img {
+  width:100%;
+  border-radius:var(--radius);
+  box-shadow:0 30px 60px rgba(0,0,0,0.2);
+}
+
+/* CARD SOBREPOSTO */
+.floating-card {
+  position:absolute;
+  bottom:-20px;
+  left:-20px;
+  background:#fff;
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  font-size:14px;
+}
+
+/* SECTION */
+.section {
+  margin-top:100px;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left:3px solid var(--primary);
+  padding-left:20px;
+}
+
+.timeline-item {
+  margin-bottom:30px;
+}
+
+.timeline-item h3 {
+  margin-bottom:5px;
+}
+
+/* CARDS */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card {
+  background:#fff;
+  padding:25px;
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+/* DARK SECTION */
+.dark {
+  background:var(--accent);
+  color:#fff;
+  padding:60px;
+  border-radius:var(--radius);
+  text-align:center;
+}
+
+/* CONTACT */
+.contact {
+  text-align:center;
+}
+
+.big {
+  font-size:40px;
+  color:var(--primary);
+}
+
+/* WHATS FLOAT */
+.whats {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+
+/* ANIMAÇÃO */
+.hidden {
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .6s ease;
+}
+
+.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .hero {
+    grid-template-columns:1fr;
+  }
+
+  .cards {
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h2>Lucas Castilho</h2>
+  <nav>
+    <span>Sobre</span>
+    <span>Experiência</span>
+    <span>Contato</span>
+  </nav>
+  <a class="cta" href="https://wa.me/5511956875311">WhatsApp</a>
+</header>
+
+<section class="hero">
+  <div class="hidden">
+    <h1>Administrador de Produção</h1>
+    <p>Atuo na organização da produção com foco em manutenção preventiva de moldes plásticos e controle de processos.</p>
+    <a class="cta" href="mailto:lucascastilhoo2009@gmail.com">Entrar em contato</a>
+  </div>
+
+  <div class="hero-img hidden">
+    <!-- SUA FOTO -->
+    <img src="sua-foto.jpg">
+    <div class="floating-card">
+      📊 Controle de Produção<br>
+      🔧 Manutenção Preventiva
+    </div>
+  </div>
+</section>
+
+<section class="section hidden">
+  <h2>Experiência</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Administrador de Produção</h3>
+      <p>Responsável pela manutenção preventiva de moldes plásticos e requisição de itens para a produção.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section hidden">
+  <h2>Formação & Skills</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Formação</h3>
+      <p>Ensino Médio (3º ano)</p>
+    </div>
+
+    <div class="card">
+      <h3>Cursos</h3>
+      <p>Inteligência Artificial<br>Power BI</p>
+    </div>
+
+    <div class="card">
+      <h3>Habilidades</h3>
+      <p>Organização, análise, controle de produção e melhoria contínua.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section hidden">
+  <div class="dark">
+    <h2>Focado em eficiência e crescimento profissional</h2>
+    <p>Buscando evoluir na área industrial e tecnológica.</p>
+  </div>
+</section>
+
+<section class="section contact hidden">
+  <div class="big">Vamos conversar</div>
+  <p>Email: lucascastilhoo2009@gmail.com</p>
+  <p>Telefone: (11) 95687-5311</p>
+</section>
+
+</div>
+
+<a class="whats" href="https://wa.me/5511956875311">💬</a>
+
+<script>
+// ANIMAÇÃO SCROLL
+const elements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
